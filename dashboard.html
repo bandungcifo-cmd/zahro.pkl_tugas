@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: inline-block;
+        }
+        button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1 id="welcomeMsg">Selamat Datang!</h1>
+        <p>Anda berhasil masuk ke halaman dashboard.</p>
+        <p>Ini adalah halaman tujuan setelah login berhasil.</p>
+        <button onclick="logout()">Logout</button>
+    </div>
+    <script>
+        var loggedInUser = localStorage.getItem("loggedInUser");
+        if (!loggedInUser) {
+            window.location.href = 'index.html';
+        } else {
+            document.getElementById("welcomeMsg").textContent = "Selamat Datang, " + loggedInUser + "!";
+        }
+
+        function logout() {
+            localStorage.removeItem("loggedInUser");
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

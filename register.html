@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form id="registerForm">
+        <h2>Register</h2>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+
+        <label for="confirmPassword">Konfirmasi Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Ulangi password" required>
+
+        <button type="button" onclick="register()">Daftar</button>
+
+        <p style="text-align:center; margin-top:15px; font-size:14px;">
+            Sudah punya akun? <a href="index.html">Login di sini</a>
+        </p>
+    </form>
+
+    <script src="register.js"></script>
+
+</body>
+</html>
